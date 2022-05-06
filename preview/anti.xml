@@ -1,0 +1,2534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT>
+    <SCANINFO FILE_ID="" MAKERS="北京安天网络安全技术有限公司" POLICY="V3.0" SCANTASK="192.168.120.2-7" SCANTASKID="21"
+              SCANTIME="2021-08-07 15:13:16" TOOLNAME="安天漏洞扫描系统"/>
+    <SCANDATA TYPE="OS">
+        <HOST HOSTID="133" IP="192.168.120.7">
+            <OSTYPE>LINUX</OSTYPE>
+            <OSVERSION>Ubuntu 16.04 Linux Kernel 4.4</OSVERSION>
+            <MAC></MAC>
+            <VUL_TOTAL>18</VUL_TOTAL>
+            <VUL_HIGH>2</VUL_HIGH>
+            <VUL_MID>3</VUL_MID>
+            <VUL_LOW>13</VUL_LOW>
+            <VUL_SCORE>7.6</VUL_SCORE>
+            <task_vul>非常危险</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>OpenSSH用户枚举（CVE-2018-15473）【POC】</NAME>
+                    <VUL_ID>51799011</VUL_ID>
+                    <NO CNVD="CNVD-2018-15473" CVE="CVE-2018-15473" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>其它</VULTYPE>
+                    <CVSS>--</CVSS>
+                    <PORT>22</PORT>
+                    <RISK>高</RISK>
+                    <SYNOPSIS>远程OpenSSH缺少安全更新。</SYNOPSIS>
+                    <DESCRIPTION>OpenSSH（OpenBSD Secure
+                        Shell）是OpenBSD计划组的一套用于安全访问远程计算机的连接工具。该工具是SSH协议的开源实现，支持对所有的传输进行加密，可有效阻止窃听、连接劫持以及其他网络级的攻击。
+
+                        OpenSSH 7.7及之前版本中存在信息泄露漏洞。该漏洞源于网络系统或产品在运行过程中存在配置等错误。未授权的攻击者可利用漏洞获取受影响组件敏感信息。
+                    </DESCRIPTION>
+                    <SOLUTION>目前厂商已发布升级补丁以修复漏洞，补丁获取链接：
+
+                        https://github.com/openbsd/src/commit/779974d35b4859c07bc3cb8a12c74b43b0a7d1e0
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://lists.debian.org/debian-lts-announce/2018/08/msg00022.html
+                        https://packages.debian.org/source/jessie/openssh
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>OpenSSH 资源管理错误漏洞</NAME>
+                    <VUL_ID>147662</VUL_ID>
+                    <NO CNVD="CNVD-2021-28041" CVE="CVE-2021-28041" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>其它</VULTYPE>
+                    <CVSS>CVSS2: 7.5(CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:P); CVSS3:
+                        9.8(CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)
+                    </CVSS>
+                    <PORT>22</PORT>
+                    <RISK>高</RISK>
+                    <SYNOPSIS></SYNOPSIS>
+                    <DESCRIPTION>OpenSSH（OpenBSD Secure
+                        Shell）是Openbsd计划组的一套用于安全访问远程计算机的连接工具。该工具是SSH协议的开源实现，支持对所有的传输进行加密，可有效阻止窃听、连接劫持以及其他网络级的攻击。
+
+                        OpenSSH before 8.5 存在安全漏洞，攻击者可利用该漏洞在遗留操作系统上不受约束的代理套接字访问。
+                    </DESCRIPTION>
+                    <SOLUTION>目前厂商已发布升级补丁以修复漏洞，补丁获取链接：
+
+                        https://github.com/openssh/openssh-portable/commit/e04fd6dde16de1cdc5a4d9946397ff60d96568db
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://www.openwall.com/lists/oss-security/2021/03/03/1
+                        https://www.openssh.com/txt/release-8.5
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>jQuery跨站脚本漏洞（CNVD-2018-02375）(CVE-2015-9251)</NAME>
+                    <VUL_ID>60013879</VUL_ID>
+                    <NO CNVD="CNVD-2015-9251" CVE="CVE-2015-9251" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 4.3(CVSS2#AV:N/AC:M/Au:N/C:N/I:P/A:N); CVSS3:
+                        4.7(CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N)
+                    </CVSS>
+                    <PORT>443</PORT>
+                    <RISK>中</RISK>
+                    <SYNOPSIS>远程Web服务器受到跨站点脚本漏洞的影响。</SYNOPSIS>
+                    <DESCRIPTION>jQuery是美国程序员John
+                        Resig所研发的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。
+
+                        jQuery 3.0.0之前版本中存在跨站脚本漏洞。远程攻击者可利用该漏洞执行文本/JavaScript响应。
+                    </DESCRIPTION>
+                    <SOLUTION>目前厂商已发布升级补丁以修复漏洞，详情请关注厂商主页：
+                        https://jquery.com/
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://github.com/jquery/jquery/commit/f60729f3903d17917dc351f3ac87794de379b0cc
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>jQuery跨站脚本漏洞（CNVD-2019-11839）(CVE-2019-11358)</NAME>
+                    <VUL_ID>60046241</VUL_ID>
+                    <NO CNVD="CNVD-2019-11358" CVE="CVE-2019-11358" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Linux本地安全</VULTYPE>
+                    <CVSS>CVSS2: 4.3(CVSS2#AV:N/AC:M/Au:N/C:N/I:P/A:N); CVSS3:
+                        6.1(CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N)
+                    </CVSS>
+                    <PORT>443</PORT>
+                    <RISK>中</RISK>
+                    <SYNOPSIS></SYNOPSIS>
+                    <DESCRIPTION>jQuery是美国John Resig程序员的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。
+
+                        jQuery 3.4.0之前版本中存在跨站脚本漏洞，该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。
+                    </DESCRIPTION>
+                    <SOLUTION>目前厂商已发布升级补丁以修复漏洞，补丁获取链接：
+                        https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://nvd.nist.gov/vuln/detail/CVE-2019-11358</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>OpenSSH 命令注入漏洞</NAME>
+                    <VUL_ID>51799310</VUL_ID>
+                    <NO CNVD="CNVD-2020-15778" CVE="CVE-2020-15778" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>其它</VULTYPE>
+                    <CVSS>CVSS2: 5.5(CVSS2#AV:N/AC:L/Au:S/C:P/I:P/A:N); CVSS3:
+                        6.4(CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N)
+                    </CVSS>
+                    <PORT>22</PORT>
+                    <RISK>中</RISK>
+                    <SYNOPSIS></SYNOPSIS>
+                    <DESCRIPTION>OpenSSH（OpenBSD Secure
+                        Shell）是OpenBSD计划组的一套用于安全访问远程计算机的连接工具。该工具是SSH协议的开源实现，支持对所有的传输进行加密，可有效阻止窃听、连接劫持以及其他网络级的攻击。
+
+                        OpenSSH
+                        8.3p1及之前版本中的scp的scp.c文件存在命令注入漏洞。该漏洞源于外部输入数据构造可执行命令过程中，网络系统或产品未正确过滤其中的特殊元素。攻击者可利用该漏洞执行非法命令。
+                    </DESCRIPTION>
+                    <SOLUTION>建议使用此软件的用户随时关注厂商主页或参考网址以获取解决办法：
+
+                        https://www.openssh.com/
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE></REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>Web服务器robots.txt信息披露</NAME>
+                    <VUL_ID>10302</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>--</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web服务器包含一个“robots.txt”文件。</SYNOPSIS>
+                    <DESCRIPTION>
+                        远程主机包含一个名为“robots.txt”的文件，旨在防止网络“机器人”访问网站中的某些目录以进行维护或索引。恶意用户还可以使用此文件的内容来了解​​受影响站点上的敏感文档或目录，并直接检索它们或针对其他攻击。
+                    </DESCRIPTION>
+                    <SOLUTION>查看站点的robots.txt文件的内容，使用机器人META标记，而不是robots.txt文件中的条目，和/或调整Web服务器的访问控制以限制对敏感材料的访问。
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://www.robotstxt.org/wc/exclusion.html</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头X-Content-Options：nosniff</NAME>
+                    <VUL_ID>51799002</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 5.0(CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程网络应用程序不设置X-Content-Options响应头。
+
+                        X-Content-Options是Microsoft提出的一种缓解MIME类型攻击的方式，并且已经在Chrome和Safari中实现。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以返回头：
+
+                        X-Content-Type-Options：nosniff
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>
+                        http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-v-comprehensive-protection.aspx
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头X-Content-Options：nosniff</NAME>
+                    <VUL_ID>51799002</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 5.0(CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>80</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程网络应用程序不设置X-Content-Options响应头。
+
+                        X-Content-Options是Microsoft提出的一种缓解MIME类型攻击的方式，并且已经在Chrome和Safari中实现。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以返回头：
+
+                        X-Content-Type-Options：nosniff
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>
+                        http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-v-comprehensive-protection.aspx
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头使用X-XSS-Protection</NAME>
+                    <VUL_ID>51799004</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-XSS-Protection响应头。
+
+                        此标题使最近的Web浏览器中内置的跨站点脚本（XSS）过滤器成为可能。
+                        它通常默认情况下是启用的，所以如果用户禁用了这个标头，这个标头的作用是重新启用这个特定网站的过滤器。此标头在IE 8+和Chrome中支持（不确定哪些版本）。在Chrome
+                        4中添加了反XSS筛选器。如果该版本符合此标题，则不详。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-XSS-Protection：1; mode=block
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://msdn.microsoft.com/en-us/library/dd565647%28v=vs.85%29.aspx</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头使用X-XSS-Protection</NAME>
+                    <VUL_ID>51799004</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>80</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-XSS-Protection响应头。
+
+                        此标题使最近的Web浏览器中内置的跨站点脚本（XSS）过滤器成为可能。
+                        它通常默认情况下是启用的，所以如果用户禁用了这个标头，这个标头的作用是重新启用这个特定网站的过滤器。此标头在IE 8+和Chrome中支持（不确定哪些版本）。在Chrome
+                        4中添加了反XSS筛选器。如果该版本符合此标题，则不详。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-XSS-Protection：1; mode=block
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://msdn.microsoft.com/en-us/library/dd565647%28v=vs.85%29.aspx</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头部使用X-Frame-Options</NAME>
+                    <VUL_ID>51799003</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-Frame-Options响应头。
+
+                        微软已经提出X-Frame-Options作为缓解点击劫持攻击的一种方法，并且已经在Chrome和Safari中实施。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-Frame-Options：DENY
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://en.wikipedia.org/wiki/Clickjacking
+                        http://blogs.sans.org/appsecstreetfighter/2009/10/15/adoption-of-x-frame-options-header/
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头部使用X-Frame-Options</NAME>
+                    <VUL_ID>51799003</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>80</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-Frame-Options响应头。
+
+                        微软已经提出X-Frame-Options作为缓解点击劫持攻击的一种方法，并且已经在Chrome和Safari中实施。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-Frame-Options：DENY
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://en.wikipedia.org/wiki/Clickjacking
+                        http://blogs.sans.org/appsecstreetfighter/2009/10/15/adoption-of-x-frame-options-header/
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>允许的HTTP方法（每个目录）</NAME>
+                    <VUL_ID>43111</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>--</CVSS>
+                    <PORT>80</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>此插件确定在各种CGI目录中允许哪些HTTP方法。</SYNOPSIS>
+                    <DESCRIPTION>通过调用OPTIONS方法，可以确定每个目录上允许哪些HTTP方法。
+
+                        由于此列表可能不完整，插件还会测试 - 如果启用了“彻底测试”，或者在扫描策略中将“启用Web应用程序测试”设置为“是” -
+                        每个目录上的各种已知HTTP方法，并将其视为不支持它接收到响应代码为400,403,405或501。
+
+                        请注意，插件输出仅供参考，并不一定表示存在任何安全漏洞。
+                    </DESCRIPTION>
+                    <SOLUTION></SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE></REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SSL证书不能信任</NAME>
+                    <VUL_ID>51192</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>通用</VULTYPE>
+                    <CVSS>CVSS2: 3.0</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>此服务的SSL证书不能被信任。</SYNOPSIS>
+                    <DESCRIPTION>服务器的X.509证书没有已知公共证书颁发机构的签名。这种情况可能以三种不同的方式发生，每种情况都会导致链中断，下面的证书不能被信任。
+
+                        首先，由服务器发送的证书链的顶部可能不会从已知的公共证书颁发机构下降。当链的顶端是无法识别的自签名证书，或缺少将连接证书链的顶端到已知的公共证书颁发机构的中间证书时，可能会发生这种情况。
+
+                        其次，证书链可能包含在扫描时无效的证书。当扫描发生在其中一个证书的'notBefore'日期之前，或在证书的'notAfter'日期之一时，可能会发生这种情况。
+
+                        第三，证书链可能包含与证书信息不符的签名，或无法验证。可以通过获得具有不良签名的证书由其发行人重新签名来修复不良签名。无法验证的签名是证书颁发者使用引擎不支持或不识别的签名算法的结果。
+
+                        如果远程主机是生产中的公共主机，链中的任何中断使得用户更难验证Web服务器的真实性和身份。这可以使对远程主机的中间人攻击更容易。
+                    </DESCRIPTION>
+                    <SOLUTION>购买或生成适用于此服务的证书。</SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE></REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP安全返回头Strict-Transport-Security</NAME>
+                    <VUL_ID>51799001</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 5.0(CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置Strict-Transport-Security响应标头。
+
+                        HTTP严格传输安全（HSTS）强制执行到服务器的安全（HTTP over SSL /
+                        TLS）连接。这可以减少网络应用程序中的漏洞通过cookie和外部链接泄漏会话数据的影响，并抵御中间人攻击。 HSTS还禁止用户忽略SSL协商警告的能力。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下标题：
+
+                        Strict-Transport-Security：max-age = 16070400;
+                        请注意，当您设置此标头时，您需要在端口443上运行的Web服务器。如果你没有它并且应用这个修复你的网站将不再可用
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://en.wikipedia.org/wiki/Strict-Transport-Security
+                        http://tools.ietf.org/html/rfc6797
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SSH 密码认证Accepted</NAME>
+                    <VUL_ID>149334</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>服务探测</VULTYPE>
+                    <CVSS>--</CVSS>
+                    <PORT>22</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS></SYNOPSIS>
+                    <DESCRIPTION>远程主机上的 SSH 服务器接受密码认证。</DESCRIPTION>
+                    <SOLUTION>信息检测，无需修复。</SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://tools.ietf.org/html/rfc4252#section-8</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>Apache HTTP Server版本</NAME>
+                    <VUL_ID>48204</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>--</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>可以获取远程Apache HTTP服务器的版本号。</SYNOPSIS>
+                    <DESCRIPTION>远程主机正在运行Apache HTTP Server，这是一个开放源代码的Web服务器。可以从Banner读取版本号。</DESCRIPTION>
+                    <SOLUTION></SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE></REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>Apache HTTP Server版本</NAME>
+                    <VUL_ID>48204</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>--</CVSS>
+                    <PORT>80</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>可以获取远程Apache HTTP服务器的版本号。</SYNOPSIS>
+                    <DESCRIPTION>远程主机正在运行Apache HTTP Server，这是一个开放源代码的Web服务器。可以从Banner读取版本号。</DESCRIPTION>
+                    <SOLUTION></SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE></REFERENCE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="OS">
+        <HOST HOSTID="36" IP="192.168.120.6">
+            <OSTYPE>ARISTA</OSTYPE>
+            <OSVERSION>Arista EOS</OSVERSION>
+            <MAC></MAC>
+            <VUL_TOTAL>11</VUL_TOTAL>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>1</VUL_MID>
+            <VUL_LOW>10</VUL_LOW>
+            <VUL_SCORE>3.4</VUL_SCORE>
+            <task_vul>比较安全</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>使用弱散算算法签名的SSL证书</NAME>
+                    <VUL_ID>35291</VUL_ID>
+                    <NO CNVD="CNVD-2004-2761" CVE="CVE-2004-2761" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>通用</VULTYPE>
+                    <CVSS>CVSS2: 4.0(CVSS2#AV:N/AC:H/Au:N/C:P/I:P/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>中</RISK>
+                    <SYNOPSIS>使用弱散列算法已经签署了证书链中的SSL证书。</SYNOPSIS>
+                    <DESCRIPTION>
+                        远程服务使用已使用加密弱散列算法（例如MD2，MD4，MD5或SHA1）签名的SSL证书链。已知这些签名算法易于发生冲突攻击。攻击者可以利用此方法生成具有相同数字签名的另一个证书，允许攻击者伪装成受影响的服务。
+
+                        请注意，此插件会报告所有使用SHA-1签名的SSL证书链在2017年1月1日之后到期，因为易受攻击。这与Google逐渐落后的SHA-1加密散列算法是一致的。
+
+                        请注意，引擎 CA数据库中包含的链中的证书已被忽略。
+                    </DESCRIPTION>
+                    <SOLUTION>联系证书颁发机构重新发行证书。</SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://tools.ietf.org/html/rfc3279
+                        http://www.phreedom.org/research/rogue-ca/
+                        http://technet.microsoft.com/en-us/security/advisory/961509
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头部使用X-Frame-Options</NAME>
+                    <VUL_ID>51799003</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-Frame-Options响应头。
+
+                        微软已经提出X-Frame-Options作为缓解点击劫持攻击的一种方法，并且已经在Chrome和Safari中实施。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-Frame-Options：DENY
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://en.wikipedia.org/wiki/Clickjacking
+                        http://blogs.sans.org/appsecstreetfighter/2009/10/15/adoption-of-x-frame-options-header/
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头部使用X-Frame-Options</NAME>
+                    <VUL_ID>51799003</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>80</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-Frame-Options响应头。
+
+                        微软已经提出X-Frame-Options作为缓解点击劫持攻击的一种方法，并且已经在Chrome和Safari中实施。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-Frame-Options：DENY
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://en.wikipedia.org/wiki/Clickjacking
+                        http://blogs.sans.org/appsecstreetfighter/2009/10/15/adoption-of-x-frame-options-header/
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SSL自签证书</NAME>
+                    <VUL_ID>57582</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>通用</VULTYPE>
+                    <CVSS>CVSS2: 3.0</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>此服务的SSL证书链以无法识别的自签名证书结束。</SYNOPSIS>
+                    <DESCRIPTION>此服务的X.509证书链未经认可的认证机构签名。如果远程主机是生产中的公共主机，则会使SSL的使用无效，因为任何人都可能针对远程主机建立中间人攻击。
+
+                        请注意，此插件不会检查结束于不是自签名但由无法识别的证书颁发机构签名的证书的证书链。
+                    </DESCRIPTION>
+                    <SOLUTION>购买或生成适用于此服务的证书。</SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE></REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SSL证书不能信任</NAME>
+                    <VUL_ID>51192</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>通用</VULTYPE>
+                    <CVSS>CVSS2: 3.0</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>此服务的SSL证书不能被信任。</SYNOPSIS>
+                    <DESCRIPTION>服务器的X.509证书没有已知公共证书颁发机构的签名。这种情况可能以三种不同的方式发生，每种情况都会导致链中断，下面的证书不能被信任。
+
+                        首先，由服务器发送的证书链的顶部可能不会从已知的公共证书颁发机构下降。当链的顶端是无法识别的自签名证书，或缺少将连接证书链的顶端到已知的公共证书颁发机构的中间证书时，可能会发生这种情况。
+
+                        其次，证书链可能包含在扫描时无效的证书。当扫描发生在其中一个证书的'notBefore'日期之前，或在证书的'notAfter'日期之一时，可能会发生这种情况。
+
+                        第三，证书链可能包含与证书信息不符的签名，或无法验证。可以通过获得具有不良签名的证书由其发行人重新签名来修复不良签名。无法验证的签名是证书颁发者使用引擎不支持或不识别的签名算法的结果。
+
+                        如果远程主机是生产中的公共主机，链中的任何中断使得用户更难验证Web服务器的真实性和身份。这可以使对远程主机的中间人攻击更容易。
+                    </DESCRIPTION>
+                    <SOLUTION>购买或生成适用于此服务的证书。</SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE></REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP安全返回头Strict-Transport-Security</NAME>
+                    <VUL_ID>51799001</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 5.0(CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置Strict-Transport-Security响应标头。
+
+                        HTTP严格传输安全（HSTS）强制执行到服务器的安全（HTTP over SSL /
+                        TLS）连接。这可以减少网络应用程序中的漏洞通过cookie和外部链接泄漏会话数据的影响，并抵御中间人攻击。 HSTS还禁止用户忽略SSL协商警告的能力。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下标题：
+
+                        Strict-Transport-Security：max-age = 16070400;
+                        请注意，当您设置此标头时，您需要在端口443上运行的Web服务器。如果你没有它并且应用这个修复你的网站将不再可用
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://en.wikipedia.org/wiki/Strict-Transport-Security
+                        http://tools.ietf.org/html/rfc6797
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SSH 密码认证Accepted</NAME>
+                    <VUL_ID>149334</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>服务探测</VULTYPE>
+                    <CVSS>--</CVSS>
+                    <PORT>22</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS></SYNOPSIS>
+                    <DESCRIPTION>远程主机上的 SSH 服务器接受密码认证。</DESCRIPTION>
+                    <SOLUTION>信息检测，无需修复。</SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://tools.ietf.org/html/rfc4252#section-8</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头X-Content-Options：nosniff</NAME>
+                    <VUL_ID>51799002</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 5.0(CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程网络应用程序不设置X-Content-Options响应头。
+
+                        X-Content-Options是Microsoft提出的一种缓解MIME类型攻击的方式，并且已经在Chrome和Safari中实现。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以返回头：
+
+                        X-Content-Type-Options：nosniff
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>
+                        http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-v-comprehensive-protection.aspx
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头X-Content-Options：nosniff</NAME>
+                    <VUL_ID>51799002</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 5.0(CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>80</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程网络应用程序不设置X-Content-Options响应头。
+
+                        X-Content-Options是Microsoft提出的一种缓解MIME类型攻击的方式，并且已经在Chrome和Safari中实现。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以返回头：
+
+                        X-Content-Type-Options：nosniff
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>
+                        http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-v-comprehensive-protection.aspx
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头使用X-XSS-Protection</NAME>
+                    <VUL_ID>51799004</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-XSS-Protection响应头。
+
+                        此标题使最近的Web浏览器中内置的跨站点脚本（XSS）过滤器成为可能。
+                        它通常默认情况下是启用的，所以如果用户禁用了这个标头，这个标头的作用是重新启用这个特定网站的过滤器。此标头在IE 8+和Chrome中支持（不确定哪些版本）。在Chrome
+                        4中添加了反XSS筛选器。如果该版本符合此标题，则不详。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-XSS-Protection：1; mode=block
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://msdn.microsoft.com/en-us/library/dd565647%28v=vs.85%29.aspx</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头使用X-XSS-Protection</NAME>
+                    <VUL_ID>51799004</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>80</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-XSS-Protection响应头。
+
+                        此标题使最近的Web浏览器中内置的跨站点脚本（XSS）过滤器成为可能。
+                        它通常默认情况下是启用的，所以如果用户禁用了这个标头，这个标头的作用是重新启用这个特定网站的过滤器。此标头在IE 8+和Chrome中支持（不确定哪些版本）。在Chrome
+                        4中添加了反XSS筛选器。如果该版本符合此标题，则不详。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-XSS-Protection：1; mode=block
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://msdn.microsoft.com/en-us/library/dd565647%28v=vs.85%29.aspx</REFERENCE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="OS">
+        <HOST HOSTID="49" IP="192.168.120.4">
+            <OSTYPE>WINDOWS</OSTYPE>
+            <OSVERSION>Microsoft Windows 98</OSVERSION>
+            <MAC></MAC>
+            <VUL_TOTAL>0</VUL_TOTAL>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>0</VUL_MID>
+            <VUL_LOW>0</VUL_LOW>
+            <VUL_SCORE>0.0</VUL_SCORE>
+            <task_vul>非常安全</task_vul>
+            <DATA/>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="OS">
+        <HOST HOSTID="140" IP="192.168.120.3">
+            <OSTYPE>LINUX</OSTYPE>
+            <OSVERSION>Linux Kernel 2.6</OSVERSION>
+            <MAC></MAC>
+            <VUL_TOTAL>6</VUL_TOTAL>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>0</VUL_MID>
+            <VUL_LOW>6</VUL_LOW>
+            <VUL_SCORE>1.8</VUL_SCORE>
+            <task_vul>非常安全</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头部使用X-Frame-Options</NAME>
+                    <VUL_ID>51799003</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-Frame-Options响应头。
+
+                        微软已经提出X-Frame-Options作为缓解点击劫持攻击的一种方法，并且已经在Chrome和Safari中实施。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-Frame-Options：DENY
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://en.wikipedia.org/wiki/Clickjacking
+                        http://blogs.sans.org/appsecstreetfighter/2009/10/15/adoption-of-x-frame-options-header/
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头X-Content-Options：nosniff</NAME>
+                    <VUL_ID>51799002</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 5.0(CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程网络应用程序不设置X-Content-Options响应头。
+
+                        X-Content-Options是Microsoft提出的一种缓解MIME类型攻击的方式，并且已经在Chrome和Safari中实现。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以返回头：
+
+                        X-Content-Type-Options：nosniff
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>
+                        http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-v-comprehensive-protection.aspx
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头使用X-XSS-Protection</NAME>
+                    <VUL_ID>51799004</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-XSS-Protection响应头。
+
+                        此标题使最近的Web浏览器中内置的跨站点脚本（XSS）过滤器成为可能。
+                        它通常默认情况下是启用的，所以如果用户禁用了这个标头，这个标头的作用是重新启用这个特定网站的过滤器。此标头在IE 8+和Chrome中支持（不确定哪些版本）。在Chrome
+                        4中添加了反XSS筛选器。如果该版本符合此标题，则不详。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-XSS-Protection：1; mode=block
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://msdn.microsoft.com/en-us/library/dd565647%28v=vs.85%29.aspx</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SSL证书不能信任</NAME>
+                    <VUL_ID>51192</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>通用</VULTYPE>
+                    <CVSS>CVSS2: 3.0</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>此服务的SSL证书不能被信任。</SYNOPSIS>
+                    <DESCRIPTION>服务器的X.509证书没有已知公共证书颁发机构的签名。这种情况可能以三种不同的方式发生，每种情况都会导致链中断，下面的证书不能被信任。
+
+                        首先，由服务器发送的证书链的顶部可能不会从已知的公共证书颁发机构下降。当链的顶端是无法识别的自签名证书，或缺少将连接证书链的顶端到已知的公共证书颁发机构的中间证书时，可能会发生这种情况。
+
+                        其次，证书链可能包含在扫描时无效的证书。当扫描发生在其中一个证书的'notBefore'日期之前，或在证书的'notAfter'日期之一时，可能会发生这种情况。
+
+                        第三，证书链可能包含与证书信息不符的签名，或无法验证。可以通过获得具有不良签名的证书由其发行人重新签名来修复不良签名。无法验证的签名是证书颁发者使用引擎不支持或不识别的签名算法的结果。
+
+                        如果远程主机是生产中的公共主机，链中的任何中断使得用户更难验证Web服务器的真实性和身份。这可以使对远程主机的中间人攻击更容易。
+                    </DESCRIPTION>
+                    <SOLUTION>购买或生成适用于此服务的证书。</SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE></REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SSH 密码认证Accepted</NAME>
+                    <VUL_ID>149334</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>服务探测</VULTYPE>
+                    <CVSS>--</CVSS>
+                    <PORT>22</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS></SYNOPSIS>
+                    <DESCRIPTION>远程主机上的 SSH 服务器接受密码认证。</DESCRIPTION>
+                    <SOLUTION>信息检测，无需修复。</SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://tools.ietf.org/html/rfc4252#section-8</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>Apache HTTP Server版本</NAME>
+                    <VUL_ID>48204</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>--</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>可以获取远程Apache HTTP服务器的版本号。</SYNOPSIS>
+                    <DESCRIPTION>远程主机正在运行Apache HTTP Server，这是一个开放源代码的Web服务器。可以从Banner读取版本号。</DESCRIPTION>
+                    <SOLUTION></SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE></REFERENCE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="OS">
+        <HOST HOSTID="71" IP="192.168.120.2">
+            <OSTYPE>LINUX</OSTYPE>
+            <OSVERSION>Linksys Wireless Access Point
+                Linux Kernel 2.6
+                Palo Alto Networks PAN-OS
+            </OSVERSION>
+            <MAC></MAC>
+            <VUL_TOTAL>10</VUL_TOTAL>
+            <VUL_HIGH>1</VUL_HIGH>
+            <VUL_MID>3</VUL_MID>
+            <VUL_LOW>6</VUL_LOW>
+            <VUL_SCORE>6.6</VUL_SCORE>
+            <task_vul>比较危险</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>OpenSSH 资源管理错误漏洞</NAME>
+                    <VUL_ID>147662</VUL_ID>
+                    <NO CNVD="CNVD-2021-28041" CVE="CVE-2021-28041" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>其它</VULTYPE>
+                    <CVSS>CVSS2: 7.5(CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:P); CVSS3:
+                        9.8(CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)
+                    </CVSS>
+                    <PORT>22</PORT>
+                    <RISK>高</RISK>
+                    <SYNOPSIS></SYNOPSIS>
+                    <DESCRIPTION>OpenSSH（OpenBSD Secure
+                        Shell）是Openbsd计划组的一套用于安全访问远程计算机的连接工具。该工具是SSH协议的开源实现，支持对所有的传输进行加密，可有效阻止窃听、连接劫持以及其他网络级的攻击。
+
+                        OpenSSH before 8.5 存在安全漏洞，攻击者可利用该漏洞在遗留操作系统上不受约束的代理套接字访问。
+                    </DESCRIPTION>
+                    <SOLUTION>目前厂商已发布升级补丁以修复漏洞，补丁获取链接：
+
+                        https://github.com/openssh/openssh-portable/commit/e04fd6dde16de1cdc5a4d9946397ff60d96568db
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://www.openwall.com/lists/oss-security/2021/03/03/1
+                        https://www.openssh.com/txt/release-8.5
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>jQuery跨站脚本漏洞（CNVD-2018-02375）(CVE-2015-9251)</NAME>
+                    <VUL_ID>60013879</VUL_ID>
+                    <NO CNVD="CNVD-2015-9251" CVE="CVE-2015-9251" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 4.3(CVSS2#AV:N/AC:M/Au:N/C:N/I:P/A:N); CVSS3:
+                        4.7(CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N)
+                    </CVSS>
+                    <PORT>443</PORT>
+                    <RISK>中</RISK>
+                    <SYNOPSIS>远程Web服务器受到跨站点脚本漏洞的影响。</SYNOPSIS>
+                    <DESCRIPTION>jQuery是美国程序员John
+                        Resig所研发的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。
+
+                        jQuery 3.0.0之前版本中存在跨站脚本漏洞。远程攻击者可利用该漏洞执行文本/JavaScript响应。
+                    </DESCRIPTION>
+                    <SOLUTION>目前厂商已发布升级补丁以修复漏洞，详情请关注厂商主页：
+                        https://jquery.com/
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://github.com/jquery/jquery/commit/f60729f3903d17917dc351f3ac87794de379b0cc
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>Linux Kernel授权问题漏洞(CVE-2011-3188)</NAME>
+                    <VUL_ID>60031592</VUL_ID>
+                    <NO CNVD="CNVD-2011-3188" CVE="CVE-2011-3188" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>云安全</VULTYPE>
+                    <CVSS>CVSS2: 10.0(CVSS2#AV:N/AC:L/Au:N/C:C/I:C/A:C);</CVSS>
+                    <PORT>0</PORT>
+                    <RISK>中</RISK>
+                    <SYNOPSIS></SYNOPSIS>
+                    <DESCRIPTION>Linux kernel是美国Linux基金会发布的操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。
+                        Linux kernel
+                        3.1之前版本的（1）IPv4与（2）IPv6实现中存在漏洞，该漏洞源于使用修改MD4算法生成的序列号和分段的鉴定值。远程攻击者可通过预测这些值和发送特制数据包导致拒绝服务（破坏网络），或者劫持网络会话。
+                    </DESCRIPTION>
+                    <SOLUTION>目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接：
+                        http://www.kernel.org/
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://www.nsfocus.net/vulndb/20805
+                        http://www.nsfocus.net/vulndb/17602
+                        http://www.securityfocus.com/bid/49289
+                        http://secunia.com/advisories/47511
+                        http://secunia.com/advisories/47307
+                        http://secunia.com/advisories/47241
+                        http://secunia.com/advisories/47039
+                        http://secunia.com/advisories/46972
+                        http://secunia.com/advisories/46824
+                        http://secunia.com/advisories/46795
+                        http://secunia.com/advisories/46598
+                        http://secunia.com/advisories/46595
+                        http://secunia.com/advisories/46590
+                        http://secunia.com/advisories/46589
+                        http://secunia.com/advisories/46287
+                        http://secunia.com/advisories/46539
+                        http://secunia.com/advisories/46543
+                        http://secunia.com/advisories/46585
+                        http://secunia.com/advisories/46587
+                        http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=6e5714eaf77d79ae1c8b47e3e040ff5411b717ec
+                        http://secunia.com/advisories/44310
+                        http://secunia.com/advisories/45933
+                        http://secunia.com/advisories/46133
+                        http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.1
+                        http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=bc0b96b54a21246e377122d54569eef71cec535f
+                        http://www.openwall.com/lists/oss-security/2011/08/23/2
+                        https://bugzilla.redhat.com/show_bug.cgi?id=732658
+                        https://github.com/torvalds/linux/commit/6e5714eaf77d79ae1c8b47e3e040ff5411b717ec
+                        https://github.com/torvalds/linux/commit/bc0b96b54a21246e377122d54569eef71cec535f
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>jQuery跨站脚本漏洞（CNVD-2019-11839）(CVE-2019-11358)</NAME>
+                    <VUL_ID>60046241</VUL_ID>
+                    <NO CNVD="CNVD-2019-11358" CVE="CVE-2019-11358" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Linux本地安全</VULTYPE>
+                    <CVSS>CVSS2: 4.3(CVSS2#AV:N/AC:M/Au:N/C:N/I:P/A:N); CVSS3:
+                        6.1(CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N)
+                    </CVSS>
+                    <PORT>443</PORT>
+                    <RISK>中</RISK>
+                    <SYNOPSIS></SYNOPSIS>
+                    <DESCRIPTION>jQuery是美国John Resig程序员的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。
+
+                        jQuery 3.4.0之前版本中存在跨站脚本漏洞，该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。
+                    </DESCRIPTION>
+                    <SOLUTION>目前厂商已发布升级补丁以修复漏洞，补丁获取链接：
+                        https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://nvd.nist.gov/vuln/detail/CVE-2019-11358</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SSL证书不能信任</NAME>
+                    <VUL_ID>51192</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>通用</VULTYPE>
+                    <CVSS>CVSS2: 3.0</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>此服务的SSL证书不能被信任。</SYNOPSIS>
+                    <DESCRIPTION>服务器的X.509证书没有已知公共证书颁发机构的签名。这种情况可能以三种不同的方式发生，每种情况都会导致链中断，下面的证书不能被信任。
+
+                        首先，由服务器发送的证书链的顶部可能不会从已知的公共证书颁发机构下降。当链的顶端是无法识别的自签名证书，或缺少将连接证书链的顶端到已知的公共证书颁发机构的中间证书时，可能会发生这种情况。
+
+                        其次，证书链可能包含在扫描时无效的证书。当扫描发生在其中一个证书的'notBefore'日期之前，或在证书的'notAfter'日期之一时，可能会发生这种情况。
+
+                        第三，证书链可能包含与证书信息不符的签名，或无法验证。可以通过获得具有不良签名的证书由其发行人重新签名来修复不良签名。无法验证的签名是证书颁发者使用引擎不支持或不识别的签名算法的结果。
+
+                        如果远程主机是生产中的公共主机，链中的任何中断使得用户更难验证Web服务器的真实性和身份。这可以使对远程主机的中间人攻击更容易。
+                    </DESCRIPTION>
+                    <SOLUTION>购买或生成适用于此服务的证书。</SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE></REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP安全返回头Strict-Transport-Security</NAME>
+                    <VUL_ID>51799001</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 5.0(CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置Strict-Transport-Security响应标头。
+
+                        HTTP严格传输安全（HSTS）强制执行到服务器的安全（HTTP over SSL /
+                        TLS）连接。这可以减少网络应用程序中的漏洞通过cookie和外部链接泄漏会话数据的影响，并抵御中间人攻击。 HSTS还禁止用户忽略SSL协商警告的能力。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下标题：
+
+                        Strict-Transport-Security：max-age = 16070400;
+                        请注意，当您设置此标头时，您需要在端口443上运行的Web服务器。如果你没有它并且应用这个修复你的网站将不再可用
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://en.wikipedia.org/wiki/Strict-Transport-Security
+                        http://tools.ietf.org/html/rfc6797
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SSH 密码认证Accepted</NAME>
+                    <VUL_ID>149334</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>服务探测</VULTYPE>
+                    <CVSS>--</CVSS>
+                    <PORT>22</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS></SYNOPSIS>
+                    <DESCRIPTION>远程主机上的 SSH 服务器接受密码认证。</DESCRIPTION>
+                    <SOLUTION>信息检测，无需修复。</SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>https://tools.ietf.org/html/rfc4252#section-8</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头X-Content-Options：nosniff</NAME>
+                    <VUL_ID>51799002</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: 5.0(CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程网络应用程序不设置X-Content-Options响应头。
+
+                        X-Content-Options是Microsoft提出的一种缓解MIME类型攻击的方式，并且已经在Chrome和Safari中实现。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以返回头：
+
+                        X-Content-Type-Options：nosniff
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>
+                        http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-v-comprehensive-protection.aspx
+                    </REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头使用X-XSS-Protection</NAME>
+                    <VUL_ID>51799004</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-XSS-Protection响应头。
+
+                        此标题使最近的Web浏览器中内置的跨站点脚本（XSS）过滤器成为可能。
+                        它通常默认情况下是启用的，所以如果用户禁用了这个标头，这个标头的作用是重新启用这个特定网站的过滤器。此标头在IE 8+和Chrome中支持（不确定哪些版本）。在Chrome
+                        4中添加了反XSS筛选器。如果该版本符合此标题，则不详。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-XSS-Protection：1; mode=block
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://msdn.microsoft.com/en-us/library/dd565647%28v=vs.85%29.aspx</REFERENCE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>HTTP响应头部使用X-Frame-Options</NAME>
+                    <VUL_ID>51799003</VUL_ID>
+                    <NO CNVD="" CVE="" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>Web安全</VULTYPE>
+                    <CVSS>CVSS2: (CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N);</CVSS>
+                    <PORT>443</PORT>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>远程Web应用程序不采取措施来减轻一类Web应用程序漏洞。</SYNOPSIS>
+                    <DESCRIPTION>远程Web应用程序不设置X-Frame-Options响应头。
+
+                        微软已经提出X-Frame-Options作为缓解点击劫持攻击的一种方法，并且已经在Chrome和Safari中实施。
+                    </DESCRIPTION>
+                    <SOLUTION>需要在Web应用程序的所有页面上设置以下响应头：
+
+                        X-Frame-Options：DENY
+                    </SOLUTION>
+                    <VALIDATE></VALIDATE>
+                    <REFERENCE>http://en.wikipedia.org/wiki/Clickjacking
+                        http://blogs.sans.org/appsecstreetfighter/2009/10/15/adoption-of-x-frame-options-header/
+                    </REFERENCE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="WEB">
+        <HOST HOSTID="72" WEB="http://192.168.120.2:443/">
+            <WEBSERVERBANNER></WEBSERVERBANNER>
+            <TECHNOLOGIES></TECHNOLOGIES>
+            <ENCODER>UTF-8</ENCODER>
+            <TITLE></TITLE>
+            <SERVERVERSION>局域网--</SERVERVERSION>
+            <VUL_TOTAL>0</VUL_TOTAL>
+            <MISINFO>0</MISINFO>
+            <FIXED>0</FIXED>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>0</VUL_MID>
+            <VUL_LOW>0</VUL_LOW>
+            <VUL_INFO>0</VUL_INFO>
+            <VUL_SCORE>0.0</VUL_SCORE>
+            <task_vul>非常安全</task_vul>
+            <DATA/>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="WEB">
+        <HOST HOSTID="50" WEB="http://192.168.120.4/">
+            <WEBSERVERBANNER>Apache</WEBSERVERBANNER>
+            <TECHNOLOGIES></TECHNOLOGIES>
+            <ENCODER>gb2312</ENCODER>
+            <TITLE></TITLE>
+            <SERVERVERSION>局域网--</SERVERVERSION>
+            <VUL_TOTAL>3</VUL_TOTAL>
+            <MISINFO>0</MISINFO>
+            <FIXED>0</FIXED>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>0</VUL_MID>
+            <VUL_LOW>2</VUL_LOW>
+            <VUL_INFO>1</VUL_INFO>
+            <VUL_SCORE>1.9</VUL_SCORE>
+            <task_vul>非常安全</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>X-Frame-Options头未设置</NAME>
+                    <VUL_ID>485</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </SYNOPSIS>
+                    <DESCRIPTION>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </DESCRIPTION>
+                    <SOLUTION>修改web服务器配置，添加X-frame-options响应头。赋值有如下三种：
+                        （1）DENY：不能被嵌入到任何iframe或frame中。
+                        （2）SAMEORIGIN：页面只能被本站页面嵌入到iframe或者frame中。
+                        （3）ALLOW-FROM uri：只能被嵌入到指定域名的框架中。
+                        也可在代码中加入，在PHP中加入：
+                        header('X-Frame-Options: deny');
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.4/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET / HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.4/
+                                Host: 192.168.120.4
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>启用了危险的Method</NAME>
+                    <VUL_ID>245</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A5 安全配置错误</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>目标WEB服务器启用了危险的Method。
+                        这些Method是HTTP（超文本传输）协议定义的一种服务器文件操作方法，该方法允许客户端操作服务器上的指定文件。
+                        危害：
+                        恶意攻击者可以使用该方法修改服务器上的任意文件，从而给用户造成数据损失，系统损坏等结果。
+                    </SYNOPSIS>
+                    <DESCRIPTION>目标WEB服务器启用了危险的Method。
+                        这些Method是HTTP（超文本传输）协议定义的一种服务器文件操作方法，该方法允许客户端操作服务器上的指定文件。
+                        危害：
+                        恶意攻击者可以使用该方法修改服务器上的任意文件，从而给用户造成数据损失，系统损坏等结果。
+                    </DESCRIPTION>
+                    <SOLUTION>正确配置的WEB服务器不应允许任意用户随意使用危险的方法在服务器上对文件进行修改，因此建议：
+                        1、如果实在必要，请进行配置，限定这些Http方法能够操作的目录为指定目录，该目录不应包含重要的文件；
+                        2、如非必要，请禁用这些方法。
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.4/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>OPTIONS /dec0yscanner HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.4/
+                                Host: 192.168.120.4
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>服务器版本信息泄漏</NAME>
+                    <VUL_ID>455</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>信息</RISK>
+                    <SYNOPSIS>目标服务器返回的信息头中包含了Web server的版本信息。</SYNOPSIS>
+                    <DESCRIPTION>目标服务器返回的信息头中包含了Web server的版本信息。</DESCRIPTION>
+                    <SOLUTION>修改配置文件web.config防止ASP.Net版本泄漏，具体如下：
+                        &lt;System.Web&gt;
+                        &lt;httpRuntime enableVersionHeader=&quot;false&quot; /&gt;
+                        &lt;/System.Web&gt;
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.4/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /%7C~.aspx HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.4/
+                                Host: 192.168.120.4
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="WEB">
+        <HOST HOSTID="237" WEB="http://192.168.120.4:443/">
+            <WEBSERVERBANNER>Apache</WEBSERVERBANNER>
+            <TECHNOLOGIES></TECHNOLOGIES>
+            <ENCODER>iso-8859-1</ENCODER>
+            <TITLE>400BadRequest</TITLE>
+            <SERVERVERSION>局域网--</SERVERVERSION>
+            <VUL_TOTAL>3</VUL_TOTAL>
+            <MISINFO>0</MISINFO>
+            <FIXED>0</FIXED>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>1</VUL_MID>
+            <VUL_LOW>1</VUL_LOW>
+            <VUL_INFO>1</VUL_INFO>
+            <VUL_SCORE>3.0</VUL_SCORE>
+            <task_vul>比较安全</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>域名访问限制不严格</NAME>
+                    <VUL_ID>416</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A5 安全配置错误</VULTYPE>
+                    <RISK>中</RISK>
+                    <SYNOPSIS>Http请求的Hostname字段没有严格的域名限制，导致可以绕过一些防护措施。</SYNOPSIS>
+                    <DESCRIPTION>Http请求的Hostname字段没有严格的域名限制，导致可以绕过一些防护措施。</DESCRIPTION>
+                    <SOLUTION>配置WEB服务器，限制只能以域名形式访问服务器。</SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.4:443/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET / HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.4:443/
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Host: evilh0sttest
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>X-Frame-Options头未设置</NAME>
+                    <VUL_ID>485</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </SYNOPSIS>
+                    <DESCRIPTION>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </DESCRIPTION>
+                    <SOLUTION>修改web服务器配置，添加X-frame-options响应头。赋值有如下三种：
+                        （1）DENY：不能被嵌入到任何iframe或frame中。
+                        （2）SAMEORIGIN：页面只能被本站页面嵌入到iframe或者frame中。
+                        （3）ALLOW-FROM uri：只能被嵌入到指定域名的框架中。
+                        也可在代码中加入，在PHP中加入：
+                        header('X-Frame-Options: deny');
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.4:443/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET / HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.4:443/
+                                Host: 192.168.120.4
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>服务器版本信息泄漏</NAME>
+                    <VUL_ID>455</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>信息</RISK>
+                    <SYNOPSIS>目标服务器返回的信息头中包含了Web server的版本信息。</SYNOPSIS>
+                    <DESCRIPTION>目标服务器返回的信息头中包含了Web server的版本信息。</DESCRIPTION>
+                    <SOLUTION>修改配置文件web.config防止ASP.Net版本泄漏，具体如下：
+                        &lt;System.Web&gt;
+                        &lt;httpRuntime enableVersionHeader=&quot;false&quot; /&gt;
+                        &lt;/System.Web&gt;
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.4:443/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /%7C~.aspx HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.4:443/
+                                Host: 192.168.120.4:443
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="WEB">
+        <HOST HOSTID="52" WEB="http://192.168.120.4:5000/">
+            <WEBSERVERBANNER></WEBSERVERBANNER>
+            <TECHNOLOGIES></TECHNOLOGIES>
+            <ENCODER>utf-8</ENCODER>
+            <TITLE></TITLE>
+            <SERVERVERSION>局域网--</SERVERVERSION>
+            <VUL_TOTAL>2</VUL_TOTAL>
+            <MISINFO>0</MISINFO>
+            <FIXED>0</FIXED>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>1</VUL_MID>
+            <VUL_LOW>1</VUL_LOW>
+            <VUL_INFO>0</VUL_INFO>
+            <VUL_SCORE>2.5</VUL_SCORE>
+            <task_vul>比较安全</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>域名访问限制不严格</NAME>
+                    <VUL_ID>416</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A5 安全配置错误</VULTYPE>
+                    <RISK>中</RISK>
+                    <SYNOPSIS>Http请求的Hostname字段没有严格的域名限制，导致可以绕过一些防护措施。</SYNOPSIS>
+                    <DESCRIPTION>Http请求的Hostname字段没有严格的域名限制，导致可以绕过一些防护措施。</DESCRIPTION>
+                    <SOLUTION>配置WEB服务器，限制只能以域名形式访问服务器。</SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.4:5000/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET / HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.4:5000/
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Host: evilh0sttest
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>X-Frame-Options头未设置</NAME>
+                    <VUL_ID>485</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </SYNOPSIS>
+                    <DESCRIPTION>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </DESCRIPTION>
+                    <SOLUTION>修改web服务器配置，添加X-frame-options响应头。赋值有如下三种：
+                        （1）DENY：不能被嵌入到任何iframe或frame中。
+                        （2）SAMEORIGIN：页面只能被本站页面嵌入到iframe或者frame中。
+                        （3）ALLOW-FROM uri：只能被嵌入到指定域名的框架中。
+                        也可在代码中加入，在PHP中加入：
+                        header('X-Frame-Options: deny');
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.4:5000/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET / HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.4:5000/
+                                Host: 192.168.120.4
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="WEB">
+        <HOST HOSTID="38" WEB="http://192.168.120.6:443/">
+            <WEBSERVERBANNER></WEBSERVERBANNER>
+            <TECHNOLOGIES></TECHNOLOGIES>
+            <ENCODER>UTF-8</ENCODER>
+            <TITLE></TITLE>
+            <SERVERVERSION>局域网--</SERVERVERSION>
+            <VUL_TOTAL>0</VUL_TOTAL>
+            <MISINFO>0</MISINFO>
+            <FIXED>0</FIXED>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>0</VUL_MID>
+            <VUL_LOW>0</VUL_LOW>
+            <VUL_INFO>0</VUL_INFO>
+            <VUL_SCORE>0.0</VUL_SCORE>
+            <task_vul>非常安全</task_vul>
+            <DATA/>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="WEB">
+        <HOST HOSTID="134" WEB="http://192.168.120.7/">
+            <WEBSERVERBANNER>Apache</WEBSERVERBANNER>
+            <TECHNOLOGIES></TECHNOLOGIES>
+            <ENCODER>iso-8859-1</ENCODER>
+            <TITLE>403Forbidden</TITLE>
+            <SERVERVERSION>局域网--</SERVERVERSION>
+            <VUL_TOTAL>3</VUL_TOTAL>
+            <MISINFO>0</MISINFO>
+            <FIXED>0</FIXED>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>1</VUL_MID>
+            <VUL_LOW>1</VUL_LOW>
+            <VUL_INFO>1</VUL_INFO>
+            <VUL_SCORE>3.0</VUL_SCORE>
+            <task_vul>比较安全</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>域名访问限制不严格</NAME>
+                    <VUL_ID>416</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A5 安全配置错误</VULTYPE>
+                    <RISK>中</RISK>
+                    <SYNOPSIS>Http请求的Hostname字段没有严格的域名限制，导致可以绕过一些防护措施。</SYNOPSIS>
+                    <DESCRIPTION>Http请求的Hostname字段没有严格的域名限制，导致可以绕过一些防护措施。</DESCRIPTION>
+                    <SOLUTION>配置WEB服务器，限制只能以域名形式访问服务器。</SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.7/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET / HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.7/
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Host: evilh0sttest
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>X-Frame-Options头未设置</NAME>
+                    <VUL_ID>485</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </SYNOPSIS>
+                    <DESCRIPTION>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </DESCRIPTION>
+                    <SOLUTION>修改web服务器配置，添加X-frame-options响应头。赋值有如下三种：
+                        （1）DENY：不能被嵌入到任何iframe或frame中。
+                        （2）SAMEORIGIN：页面只能被本站页面嵌入到iframe或者frame中。
+                        （3）ALLOW-FROM uri：只能被嵌入到指定域名的框架中。
+                        也可在代码中加入，在PHP中加入：
+                        header('X-Frame-Options: deny');
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.7/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET / HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.7/
+                                Host: 192.168.120.7
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>服务器版本信息泄漏</NAME>
+                    <VUL_ID>455</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>信息</RISK>
+                    <SYNOPSIS>目标服务器返回的信息头中包含了Web server的版本信息。</SYNOPSIS>
+                    <DESCRIPTION>目标服务器返回的信息头中包含了Web server的版本信息。</DESCRIPTION>
+                    <SOLUTION>修改配置文件web.config防止ASP.Net版本泄漏，具体如下：
+                        &lt;System.Web&gt;
+                        &lt;httpRuntime enableVersionHeader=&quot;false&quot; /&gt;
+                        &lt;/System.Web&gt;
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.7/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /%7C~.aspx HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.7/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="WEB">
+        <HOST HOSTID="37" WEB="http://192.168.120.6/">
+            <WEBSERVERBANNER>nginx</WEBSERVERBANNER>
+            <TECHNOLOGIES></TECHNOLOGIES>
+            <ENCODER>utf-8</ENCODER>
+            <TITLE>探海威胁检测系统</TITLE>
+            <SERVERVERSION>局域网--</SERVERVERSION>
+            <VUL_TOTAL>3</VUL_TOTAL>
+            <MISINFO>0</MISINFO>
+            <FIXED>0</FIXED>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>1</VUL_MID>
+            <VUL_LOW>2</VUL_LOW>
+            <VUL_INFO>0</VUL_INFO>
+            <VUL_SCORE>2.9</VUL_SCORE>
+            <task_vul>比较安全</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>域名访问限制不严格</NAME>
+                    <VUL_ID>416</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A5 安全配置错误</VULTYPE>
+                    <RISK>中</RISK>
+                    <SYNOPSIS>Http请求的Hostname字段没有严格的域名限制，导致可以绕过一些防护措施。</SYNOPSIS>
+                    <DESCRIPTION>Http请求的Hostname字段没有严格的域名限制，导致可以绕过一些防护措施。</DESCRIPTION>
+                    <SOLUTION>配置WEB服务器，限制只能以域名形式访问服务器。</SOLUTION>
+                    <DETAILS>
+                        <URL URL="http://192.168.120.6/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET / HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.6/
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Host: evilh0sttest
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>文件路径泄漏</NAME>
+                    <VUL_ID>468</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>页面信息中包含本地文件路径信息，为恶意攻击者提供了重要的信息。</SYNOPSIS>
+                    <DESCRIPTION>页面信息中包含本地文件路径信息，为恶意攻击者提供了重要的信息。</DESCRIPTION>
+                    <SOLUTION>请删除包含的路径信息。</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.6/dist/build.js">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /dist/build.js HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.6/
+                                Host: 192.168.120.6
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>2</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>发现内网IP地址</NAME>
+                    <VUL_ID>419</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>网页中发现内部使用的私有IP地址信息，可能暴露内部的网络结构。</SYNOPSIS>
+                    <DESCRIPTION>网页中发现内部使用的私有IP地址信息，可能暴露内部的网络结构。</DESCRIPTION>
+                    <SOLUTION>人工确认必要性，如无必要，请删除该IP地址信息。</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.6/dist/build.js">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /dist/build.js HTTP/1.1
+                                Accept: */*
+                                Referer: http://192.168.120.6/
+                                Host: 192.168.120.6
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>2</_TYPE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="WEB">
+        <HOST HOSTID="141" WEB="https://192.168.120.3/">
+            <WEBSERVERBANNER>Apache</WEBSERVERBANNER>
+            <TECHNOLOGIES></TECHNOLOGIES>
+            <ENCODER>utf-8</ENCODER>
+            <TITLE></TITLE>
+            <SERVERVERSION>局域网--</SERVERVERSION>
+            <VUL_TOTAL>13</VUL_TOTAL>
+            <MISINFO>0</MISINFO>
+            <FIXED>0</FIXED>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>0</VUL_MID>
+            <VUL_LOW>11</VUL_LOW>
+            <VUL_INFO>2</VUL_INFO>
+            <VUL_SCORE>2.6</VUL_SCORE>
+            <task_vul>比较安全</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>Form表单无CSRF保护</NAME>
+                    <VUL_ID>368</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A8 跨站请求伪造（CSRF）</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>跨站请求伪造，是一种类型的恶意攻击网站即未经授权的命令是从一个用户，该网站信任传递的。 扫描器找到一个没有明显CSRF保护的HTML表单。</SYNOPSIS>
+                    <DESCRIPTION>跨站请求伪造，是一种类型的恶意攻击网站即未经授权的命令是从一个用户，该网站信任传递的。 扫描器找到一个没有明显CSRF保护的HTML表单。</DESCRIPTION>
+                    <SOLUTION>增加对HTML表单的CSRF保护</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.3/login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=1&amp;login_code=&amp;username=1">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=1&amp;login_code=&amp;username=1
+                                HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=1&amp;login_code=&amp;username=1
+                                Host: 192.168.120.3
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.3/login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=1">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=1
+                                HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=1
+                                Host: 192.168.120.3
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.3/login/?username_encode=&amp;password=&amp;code=&amp;optionsRadios=zh_CN&amp;password_encode=&amp;langtype=&amp;login_code=&amp;username=">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/?username_encode=&amp;password=&amp;code=&amp;optionsRadios=zh_CN&amp;password_encode=&amp;langtype=&amp;login_code=&amp;username=
+                                HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=1
+                                Host: 192.168.120.3
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie:
+                                csrf_token=1628324108##eeb54ce0e9b638f6d754c284f837c0b2d07e140b;session=.eJyrVgpy9fUPcY13dHEJUrKqVlJIUrJS8g3JrvTJcjXydzap8M1yLPULtLVVqtVRSi4uSosvyc9OzYMr9cv1yvKryq70C_HLjcyNygLSOX4hnia-WRkZvkZemX4hySZ-uaFGvi6OVb5VoSa-7l6ZUekg42oBWQgnUg.E-_EfA.d5ArtTk7O3poQP2id7pTHfIO3e8
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.3/login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=1">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=1
+                                HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/
+                                Host: 192.168.120.3
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie:
+                                csrf_token=1628324076##82c48563fcee8ebccd8db7fee6087df30d430123;session=.eJyrVgpy9fUPcY13dHEJUrKqVlJIUrJS8g3JrvTJcjXydzap8M1yLPULtLVVqtVRSi4uSosvyc9OzYMr9cv1yvKryq70C_HLjcyNygLSOX4hnia-WRkZvkZemX4hySZ-uaFGvi6OVb5VoSa-7l6ZUekg42oBWQgnUg.E-_EXA.8-J9O5mv6eccIA3CKHgObW_W6ys
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.3/login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=1&amp;login_code=&amp;username=1">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=1&amp;login_code=&amp;username=1
+                                HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/login/?username_encode=1&amp;password=1&amp;code=1&amp;optionsRadios=zh_CN&amp;password_encode=1&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=1
+                                Host: 192.168.120.3
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie:
+                                csrf_token=1628324108##eeb54ce0e9b638f6d754c284f837c0b2d07e140b;session=.eJyrVgpy9fUPcY13dHEJUrKqVlJIUrJS8g3JrvTJcjXydzap8M1yLPULtLVVqtVRSi4uSosvyc9OzYMr9cv1yvKryq70C_HLjcyNygLSOX4hnia-WRkZvkZemX4hySZ-uaFGvi6OVb5VoSa-7l6ZUekg42oBWQgnUg.E-_EfA.d5ArtTk7O3poQP2id7pTHfIO3e8
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.3/login/?username_encode=&amp;password=&amp;code=&amp;optionsRadios=zh_CN&amp;password_encode=&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/?username_encode=&amp;password=&amp;code=&amp;optionsRadios=zh_CN&amp;password_encode=&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=
+                                HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/login/?username_encode=&amp;password=&amp;code=&amp;optionsRadios=zh_CN&amp;password_encode=&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=
+                                Host: 192.168.120.3
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.3/login/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/
+                                Host: 192.168.120.3
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.3/login/?username_encode=&amp;password=&amp;code=&amp;optionsRadios=zh_CN&amp;password_encode=&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/?username_encode=&amp;password=&amp;code=&amp;optionsRadios=zh_CN&amp;password_encode=&amp;langtype=zh_CN&amp;login_code=GOYC&amp;username=
+                                HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/
+                                Host: 192.168.120.3
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie:
+                                csrf_token=1628324076##82c48563fcee8ebccd8db7fee6087df30d430123;session=.eJyrVgpy9fUPcY13dHEJUrKqVlJIUrJS8g3JrvTJcjXydzap8M1yLPULtLVVqtVRSi4uSosvyc9OzYMr9cv1yvKryq70C_HLjcyNygLSOX4hnia-WRkZvkZemX4hySZ-uaFGvi6OVb5VoSa-7l6ZUekg42oBWQgnUg.E-_EXA.8-J9O5mv6eccIA3CKHgObW_W6ys
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.3/login/?username_encode=&amp;password=&amp;code=&amp;optionsRadios=zh_CN&amp;password_encode=&amp;langtype=&amp;login_code=&amp;username=">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/?username_encode=&amp;password=&amp;code=&amp;optionsRadios=zh_CN&amp;password_encode=&amp;langtype=&amp;login_code=&amp;username=
+                                HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/login/?username_encode=&amp;password=&amp;code=&amp;optionsRadios=zh_CN&amp;password_encode=&amp;langtype=&amp;login_code=&amp;username=
+                                Host: 192.168.120.3
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>2</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SetCookie未配置Secure</NAME>
+                    <VUL_ID>418</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A2 失效的身份认证和会话管理</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>Cookie 只能在 HTTPS 连接中被浏览器传递到服务器端进行会话验证，如果是 HTTP 连接则不会传递该信息，所以绝对不会被窃听到</SYNOPSIS>
+                    <DESCRIPTION>Cookie 只能在 HTTPS 连接中被浏览器传递到服务器端进行会话验证，如果是 HTTP 连接则不会传递该信息，所以绝对不会被窃听到</DESCRIPTION>
+                    <SOLUTION>为SetCookie配置secure属性</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.3/static/resouce/Application_zh_CN.properties">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/resouce/Application_zh_CN.properties HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/
+                                Host: 192.168.120.3
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie:
+                                csrf_token=1628324076##82c48563fcee8ebccd8db7fee6087df30d430123;session=.eJyrVgpy9fUPcY13dHEJUrKqVlJIUrJS8g3JrvTJcjXydzap8M1yLPULtLVVqtVRSi4uSosvyc9OzYMr9cv1yvKryq70C_HLjcyNygLSOX4hnia-WRkZvkZemX4hySZ-uaFGvi6OVb5VoSa-7l6ZUekg42oBWQgnUg.E-_EXA.8-J9O5mv6eccIA3CKHgObW_W6ys
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>2</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>X-Frame-Options头未设置</NAME>
+                    <VUL_ID>485</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </SYNOPSIS>
+                    <DESCRIPTION>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </DESCRIPTION>
+                    <SOLUTION>修改web服务器配置，添加X-frame-options响应头。赋值有如下三种：
+                        （1）DENY：不能被嵌入到任何iframe或frame中。
+                        （2）SAMEORIGIN：页面只能被本站页面嵌入到iframe或者frame中。
+                        （3）ALLOW-FROM uri：只能被嵌入到指定域名的框架中。
+                        也可在代码中加入，在PHP中加入：
+                        header('X-Frame-Options: deny');
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.3/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET / HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/
+                                Host: 192.168.120.3
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>敏感文件或备份</NAME>
+                    <VUL_ID>362</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A5 安全配置错误</VULTYPE>
+                    <RISK>信息</RISK>
+                    <SYNOPSIS>网站包含敏感可猜解的文件路径。</SYNOPSIS>
+                    <DESCRIPTION>网站包含敏感可猜解的文件路径。</DESCRIPTION>
+                    <SOLUTION>请删除该文件，或者正确设置权限，禁止用户访问。</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.3/static/assets/plugins/jquery-validation/.gitignore">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/assets/plugins/jquery-validation/.gitignore HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/static/assets/plugins/jquery-validation/.gitignore
+                                Host: 192.168.120.3
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: csrf_token=1628324433##02c2ba6f192c089f24781ae9e5c9d4ba918cdaf7;
+                                session=.eJyrVgpy9fUPcY13dHEJUrKqVlJIUrJS8g3JrvTJcjXydzap8M1yLPULtLVVqtVRSi4uSosvyc9OzYMr9cv1yvKryq70C_HLjcyNygLSOX4hnia-WRkZvkZemX4hySZ-uaFGvi6OVb5VoSa-7l6ZUekg42oBWQgnUg.E-_FwQ.MBOJGLRPAb7pFQe2HzzfhdS7mVA
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>1</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>服务器版本信息泄漏</NAME>
+                    <VUL_ID>455</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>信息</RISK>
+                    <SYNOPSIS>目标服务器返回的信息头中包含了Web server的版本信息。</SYNOPSIS>
+                    <DESCRIPTION>目标服务器返回的信息头中包含了Web server的版本信息。</DESCRIPTION>
+                    <SOLUTION>修改配置文件web.config防止ASP.Net版本泄漏，具体如下：
+                        &lt;System.Web&gt;
+                        &lt;httpRuntime enableVersionHeader=&quot;false&quot; /&gt;
+                        &lt;/System.Web&gt;
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.3/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /%7C~.aspx HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.3/
+                                Host: 192.168.120.3
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: csrf_token=1628324567##05f84eb0aed89072d1f12488699f1c29e551bed7;
+                                session=.eJyrVgpy9fUPcY13dHEJUrKqVlJIUrJS8g3JrvTJcjXydzap8M1yLPULtLVVqtVRSi4uSosvyc9OzYMr9cv1yvKryq70C_HLjcyNygLSOX4hnia-WRkZvkZemX4hySZ-uaFGvi6OVb5VoSa-7l6ZUekg42oBWQgnUg.E-_GRw.hmg9xTTppFlt2N2f9jKpr_dmnl0
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+    <SCANDATA TYPE="WEB">
+        <HOST HOSTID="220" WEB="https://192.168.120.7/">
+            <WEBSERVERBANNER>Apache</WEBSERVERBANNER>
+            <TECHNOLOGIES></TECHNOLOGIES>
+            <ENCODER>UTF-8</ENCODER>
+            <TITLE>安天日志审计与分析系统</TITLE>
+            <SERVERVERSION>局域网--</SERVERVERSION>
+            <VUL_TOTAL>32</VUL_TOTAL>
+            <MISINFO>0</MISINFO>
+            <FIXED>0</FIXED>
+            <VUL_HIGH>0</VUL_HIGH>
+            <VUL_MID>1</VUL_MID>
+            <VUL_LOW>20</VUL_LOW>
+            <VUL_INFO>11</VUL_INFO>
+            <VUL_SCORE>4.5</VUL_SCORE>
+            <task_vul>比较安全</task_vul>
+            <DATA>
+                <VULNERABLITY>
+                    <NAME>域名访问限制不严格</NAME>
+                    <VUL_ID>416</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A5 安全配置错误</VULTYPE>
+                    <RISK>中</RISK>
+                    <SYNOPSIS>Http请求的Hostname字段没有严格的域名限制，导致可以绕过一些防护措施。</SYNOPSIS>
+                    <DESCRIPTION>Http请求的Hostname字段没有严格的域名限制，导致可以绕过一些防护措施。</DESCRIPTION>
+                    <SOLUTION>配置WEB服务器，限制只能以域名形式访问服务器。</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.7/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                                Host: evilh0sttest
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>文件路径泄漏</NAME>
+                    <VUL_ID>468</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>页面信息中包含本地文件路径信息，为恶意攻击者提供了重要的信息。</SYNOPSIS>
+                    <DESCRIPTION>页面信息中包含本地文件路径信息，为恶意攻击者提供了重要的信息。</DESCRIPTION>
+                    <SOLUTION>请删除包含的路径信息。</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.7/static/plugins/bootstrap-daterangepicker/moment.min.js">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/plugins/bootstrap-daterangepicker/moment.min.js HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/a
+                                Host: 192.168.120.7
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>2</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>SetCookie未配置Secure</NAME>
+                    <VUL_ID>418</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A2 失效的身份认证和会话管理</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>Cookie 只能在 HTTPS 连接中被浏览器传递到服务器端进行会话验证，如果是 HTTP 连接则不会传递该信息，所以绝对不会被窃听到</SYNOPSIS>
+                    <DESCRIPTION>Cookie 只能在 HTTPS 连接中被浏览器传递到服务器端进行会话验证，如果是 HTTP 连接则不会传递该信息，所以绝对不会被窃听到</DESCRIPTION>
+                    <SOLUTION>为SetCookie配置secure属性</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.7/login/index">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>2</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>未禁用密码表单自动完成属性</NAME>
+                    <VUL_ID>420</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A2 失效的身份认证和会话管理</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>在form或input标签中没有配置禁用自动完成的属性，可能会泄露客户的敏感信息。</SYNOPSIS>
+                    <DESCRIPTION>在form或input标签中没有配置禁用自动完成的属性，可能会泄露客户的敏感信息。</DESCRIPTION>
+                    <SOLUTION>在form或input标签中配置禁用自动完成的属性</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.7/login/forget.html">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/forget.html HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6;lang_var=en-us
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/login/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/login/index.html
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6;lang_var=en-us
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/login/index">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/index/index">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept: */*
+                                Upgrade-Insecure-Requests: 1
+                                Referer: https://192.168.120.7/a
+                                Sec-Fetch-Dest: document
+                                Sec-Fetch-Site: same-origin
+                                Sec-Fetch-User: ?1
+                                Accept-Encoding: gzip, deflate
+                                Accept-Language: en-US,en;q=0.9
+                                Sec-Fetch-Mode: navigate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>2</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>X-Frame-Options头未设置</NAME>
+                    <VUL_ID>485</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </SYNOPSIS>
+                    <DESCRIPTION>目标服务器没有返回一个X-Frame-Options头。
+                        攻击者可以使用一个透明的、不可见的iframe，覆盖在目标网页上，然后诱使用户在该网页上进行操作，此时用户将在不知情的情况下点击透明的iframe页面。通过调整iframe页面的位置，可以诱使用户恰好点击iframe页面的一些功能性按钮上，导致被劫持。
+                    </DESCRIPTION>
+                    <SOLUTION>修改web服务器配置，添加X-frame-options响应头。赋值有如下三种：
+                        （1）DENY：不能被嵌入到任何iframe或frame中。
+                        （2）SAMEORIGIN：页面只能被本站页面嵌入到iframe或者frame中。
+                        （3）ALLOW-FROM uri：只能被嵌入到指定域名的框架中。
+                        也可在代码中加入，在PHP中加入：
+                        header('X-Frame-Options: deny');
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.7/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET / HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>Form表单无CSRF保护</NAME>
+                    <VUL_ID>368</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A8 跨站请求伪造（CSRF）</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>跨站请求伪造，是一种类型的恶意攻击网站即未经授权的命令是从一个用户，该网站信任传递的。 扫描器找到一个没有明显CSRF保护的HTML表单。</SYNOPSIS>
+                    <DESCRIPTION>跨站请求伪造，是一种类型的恶意攻击网站即未经授权的命令是从一个用户，该网站信任传递的。 扫描器找到一个没有明显CSRF保护的HTML表单。</DESCRIPTION>
+                    <SOLUTION>增加对HTML表单的CSRF保护</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.7/login/forget.html">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/forget.html HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6;lang_var=en-us
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/login/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/login/index.html
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6;lang_var=en-us
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/login/index">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/index/index">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept: */*
+                                Upgrade-Insecure-Requests: 1
+                                Referer: https://192.168.120.7/a
+                                Sec-Fetch-Dest: document
+                                Sec-Fetch-Site: same-origin
+                                Sec-Fetch-User: ?1
+                                Accept-Encoding: gzip, deflate
+                                Accept-Language: en-US,en;q=0.9
+                                Sec-Fetch-Mode: navigate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/login/index.html">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index.html HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6;lang_var=en-us
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>2</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>Cookie未配置HttpOnly标志</NAME>
+                    <VUL_ID>417</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A2 失效的身份认证和会话管理</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>HttpOnly 主要是为了限制web页面程序的browser端script程序读取cookie，防止恶意代码获取客户的敏感信息。</SYNOPSIS>
+                    <DESCRIPTION>HttpOnly 主要是为了限制web页面程序的browser端script程序读取cookie，防止恶意代码获取客户的敏感信息。</DESCRIPTION>
+                    <SOLUTION>为SetCookie配置HttpOnly属性</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.7/login/index">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>2</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>发现可暴力猜解的登录表单</NAME>
+                    <VUL_ID>369</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A2 失效的身份认证和会话管理</VULTYPE>
+                    <RISK>低</RISK>
+                    <SYNOPSIS>
+                        这个登录页面没有对密码猜测攻击（暴力破解）任何保护。即：以实现一个定义不正确的密码尝试次数后，某些类型的帐户锁定的。攻击者可能试图通过系统地尝试字母，数字和符号的每个可能的组合，直到发现工作的一个正确组合，以发现一个弱口令。
+                    </SYNOPSIS>
+                    <DESCRIPTION>
+                        这个登录页面没有对密码猜测攻击（暴力破解）任何保护。即：以实现一个定义不正确的密码尝试次数后，某些类型的帐户锁定的。攻击者可能试图通过系统地尝试字母，数字和符号的每个可能的组合，直到发现工作的一个正确组合，以发现一个弱口令。
+                    </DESCRIPTION>
+                    <SOLUTION>建议不正确的密码尝试次数后，实现某种类型的帐户锁定</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.7/login/forget.html">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/forget.html HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6;lang_var=en-us
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/login/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/login/index.html
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Accept-Encoding: gzip,deflate
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6;lang_var=en-us
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/login/index">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/index/index">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>2</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept: */*
+                                Upgrade-Insecure-Requests: 1
+                                Referer: https://192.168.120.7/a
+                                Sec-Fetch-Dest: document
+                                Sec-Fetch-Site: same-origin
+                                Sec-Fetch-User: ?1
+                                Accept-Encoding: gzip, deflate
+                                Accept-Language: en-US,en;q=0.9
+                                Sec-Fetch-Mode: navigate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>2</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>敏感文件或备份</NAME>
+                    <VUL_ID>362</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A5 安全配置错误</VULTYPE>
+                    <RISK>信息</RISK>
+                    <SYNOPSIS>网站包含敏感可猜解的文件路径。</SYNOPSIS>
+                    <DESCRIPTION>网站包含敏感可猜解的文件路径。</DESCRIPTION>
+                    <SOLUTION>请删除该文件，或者正确设置权限，禁止用户访问。</SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.7/static/plugins/jquery-ui/images/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/plugins/jquery-ui/images/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/static/plugins/jquery-ui/images/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/static/font/font-awesome/fonts/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/font/font-awesome/fonts/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/static/font/font-awesome/fonts/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/static/plugins/bootstrap/js/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/plugins/bootstrap/js/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/static/plugins/bootstrap/js/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/static/plugins/bootstrap/fonts/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/plugins/bootstrap/fonts/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/static/plugins/bootstrap/fonts/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/static/plugins/call-the-police/js/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/plugins/call-the-police/js/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/static/plugins/call-the-police/js/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/static/plugins/CFInstall/js/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/plugins/CFInstall/js/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/static/plugins/CFInstall/js/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/static/plugins/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/plugins/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/static/plugins/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/static/img/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/img/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/static/img/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/static/js/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/js/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/static/js/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                        <URL URL="https://192.168.120.7/static/plugins/select2/js/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>1</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /static/plugins/select2/js/ HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/static/plugins/select2/js/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=futo35fbel8kkglsn3lt4c3vf6; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>1</_TYPE>
+                </VULNERABLITY>
+                <VULNERABLITY>
+                    <NAME>服务器版本信息泄漏</NAME>
+                    <VUL_ID>455</VUL_ID>
+                    <NO CNVD="NONE" CVE="NONE" MS="NONE" OTHER="NONE"/>
+                    <VULTYPE>A6 敏感信息泄漏</VULTYPE>
+                    <RISK>信息</RISK>
+                    <SYNOPSIS>目标服务器返回的信息头中包含了Web server的版本信息。</SYNOPSIS>
+                    <DESCRIPTION>目标服务器返回的信息头中包含了Web server的版本信息。</DESCRIPTION>
+                    <SOLUTION>修改配置文件web.config防止ASP.Net版本泄漏，具体如下：
+                        &lt;System.Web&gt;
+                        &lt;httpRuntime enableVersionHeader=&quot;false&quot; /&gt;
+                        &lt;/System.Web&gt;
+                    </SOLUTION>
+                    <DETAILS>
+                        <URL URL="https://192.168.120.7/">
+                            <TYPE>STRING</TYPE>
+                            <_TYPE>3</_TYPE>
+                            <PARAMETER></PARAMETER>
+                            <REQUEST>GET /login/index HTTP/1.1
+                                Accept: */*
+                                Referer: https://192.168.120.7/
+                                Host: 192.168.120.7
+                                Connection: Keep-Alive
+                                User-Agent: Mozilla/5.0 compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0
+                                Cookie: PHPSESSID=qad1icn94iv7so4pjrddn1sene; lang_var=en-us
+                                Accept-Encoding: gzip,deflate
+                            </REQUEST>
+                            <RESPONSE></RESPONSE>
+                        </URL>
+                    </DETAILS>
+                    <_TYPE>3</_TYPE>
+                </VULNERABLITY>
+            </DATA>
+        </HOST>
+    </SCANDATA>
+</REPORT>
