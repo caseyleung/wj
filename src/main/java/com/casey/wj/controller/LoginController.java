@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.util.HtmlUtils;
 
+import javax.servlet.http.HttpSession;
 import java.util.Objects;
 
 @Controller
@@ -22,7 +23,7 @@ public class LoginController {
     @CrossOrigin
     @PostMapping(value = "api/login")
     @ResponseBody
-    public Result login(@RequestBody User requestUser) {
+    public Result login(@RequestBody User requestUser, HttpSession session) {
         System.out.println("---------------api/login--------------------");
         String username = requestUser.getUsername();
         username = HtmlUtils.htmlEscape(username);
@@ -32,6 +33,7 @@ public class LoginController {
             System.out.println("---------------400--------------------");
             return new Result(400);
         } else {
+            session.setAttribute("user",user);
             System.out.println("---------------200--------------------");
             return new Result(200);
         }

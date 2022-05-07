@@ -6750,9 +6750,9 @@ Oracle
 ------
 Oracle已经为此发布了一个安全公告（cpujul2015-2367936）以及相应补丁:
 cpujul2015-2367936：Oracle Critical Patch Update Advisory - July 2015
-链接：http://www.oracle.com/technetwork/topics/security/cpujul2015-2367936.html
+链接：http://www.oracle.com/technetwork/topics/security/cpujul201solution5-2367936.html
 
-]]></solution>
+]]></>
                             <description><![CDATA[本次扫描方式是版本扫描，可能出现误报。
 
 Oracle Fusion Middleware是一个全面的中间件产品系列，由SOA和中间件产品组成。
