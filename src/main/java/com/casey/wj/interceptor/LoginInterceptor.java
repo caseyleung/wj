@@ -24,6 +24,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
         if(beginWith(page, requireAuthPages)){
             User user = (User) session.getAttribute("user");
+            System.out.println("user: "+user);
             if(user == null){
                 response.sendRedirect("login");
                 return false;

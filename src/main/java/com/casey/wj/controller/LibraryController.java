@@ -18,11 +18,13 @@ public class LibraryController {
 
     @GetMapping("/api/books")
     public List<Book> list() throws Exception {
+        System.out.println("-----------------"+bookService.list());
         return bookService.list();
     }
 
     @PostMapping("/api/books")
     public Book addOrUpdate(@RequestBody Book book) throws Exception {
+        System.out.println("-----------------"+bookService.list());
         bookService.addOrUpdate(book);
         return book;
     }
