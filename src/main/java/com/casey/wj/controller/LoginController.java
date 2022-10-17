@@ -1,77 +1,45 @@
 package com.casey.wj.controller;
+/*
+ * @author CaseyL
+ * @date 2022/9/28 17:20
+ * */
 
-import com.casey.wj.pojo.User;
-import com.casey.wj.result.Result;
-import com.casey.wj.result.ResultFactory;
-import com.casey.wj.service.UserService;
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
+import com.casey.wj.dto.CommonResponseDto;
+import com.casey.wj.service.AuthService;
+import lombok.RequiredArgsConstructor;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.crypto.SecureRandomNumberGenerator;
-import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.util.HtmlUtils;
+import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
-import java.util.Objects;
 
-@Controller
+@RestController
+@CrossOrigin
+@RequiredArgsConstructor
 public class LoginController {
+    private final AuthService authService;
 
-    @Autowired
-    UserService userService;
-
-    @CrossOrigin
-    @PostMapping(value = "/api/login")
     @ResponseBody
-    public Result login(@RequestBody User requestUser) {
-        String username = requestUser.getUsername();
+    @PostMapping("api/login")
+    public CommonResponseDto login(@RequestBody String json) {
+        JSONObject object = JSONUtil.parseObj(json);
+        String username = object.getStr("username");
+        String password = object.getStr("password");
+        Boolean rememberMe = object.getBool("rememberMe");
+        return authService.login(username, password, rememberMe);
+    }
+
+
+    @ResponseBody
+    @GetMapping("api/logout")
+    public CommonResponseDto logout() {
+        CommonResponseDto responseDto = new CommonResponseDto();
         Subject subject = SecurityUtils.getSubject();
-//        subject.getSession().setTimeout(10000);
-        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, requestUser.getPassword());
-        try {
-            subject.login(usernamePasswordToken);
-            return ResultFactory.buildSuccessResult(username);
-        } catch (AuthenticationException e) {
-            String message = "账号密码错误";
-            return ResultFactory.buildFailResult(message);
-        }
+        subject.logout();
+        responseDto.setMessage("成功登出");
+        responseDto.setCode(200);
+        return responseDto;
     }
-
-
-    @PostMapping("api/register")
-    @ResponseBody
-    public Result register(@RequestBody User user) {
-        String username = user.getUsername();
-        String password = user.getPassword();
-        username = HtmlUtils.htmlEscape(username);
-        user.setUsername(username);
-
-        boolean exist = userService.isExist(username);
-        if (exist) {
-            String message = "用户名已被使用";
-            return ResultFactory.buildFailResult(message);
-        }
-
-        // 生成盐,默认长度 16 位
-        String salt = new SecureRandomNumberGenerator().nextBytes().toString();
-        // 设置 hash 算法迭代次数
-        int times = 2;
-        // 得到 hash 后的密码
-        String encodedPassword = new SimpleHash("md5", password, salt, times).toString();
-        // 存储用户信息，包括 salt 与 hash 后的密码
-        user.setSalt(salt);
-        user.setPassword(encodedPassword);
-        userService.add(user);
-
-        return ResultFactory.buildSuccessResult(user);
-    }
-
 
 }
